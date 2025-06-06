@@ -1,8 +1,5 @@
 import type { ComponentType } from "../App";
 import CodePreview from "./CodePreview";
-import BasicButton from "./demos/BasicButton";
-import BasicInput from "./demos/BasicInput";
-import OpenModal from "./demos/BasicModal";
 import { css } from "@emotion/react";
 
 const PlayGrandStyle = css`
