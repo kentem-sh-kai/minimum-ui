@@ -15,7 +15,7 @@ const inputStyle = css`
   }
 `;
 
-const Input: React.FC<InputProps> = (props) => (
+const Input = (props: InputProps) => (
   <input css={inputStyle} {...props} />
 );
 
