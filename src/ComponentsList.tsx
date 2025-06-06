@@ -59,12 +59,17 @@
  */
 
 import BasicButton from "./components/demos/BasicButton";
-import ButtonBasicCode from "./components/ui/Button?raw";
-import ButtonBasicDemoCode from "./components/demos/BasicButton?raw";
+import BasicButtonCode from "./components/ui/Button?raw";
+import BasicButtonDemoCode from "./components/demos/BasicButton?raw";
 
 import BasicModal from "./components/demos/BasicModal";
-import ModalBasicCode from "./components/ui/Modal?raw";
-import ModalBasicDemoCode from "./components/demos/BasicModal?raw";
+import BasicModalCode from "./components/ui/Modal?raw";
+import BasicModalDemoCode from "./components/demos/BasicModal?raw";
+
+import BasicInput from "./components/demos/BasicInput";
+import BasicInputCode from "./components/ui/Input?raw";
+import BasicInputDemoCode from "./components/demos/BasicInput?raw";
+
 
 import type { ComponentType } from "./App";
 
@@ -74,17 +79,26 @@ const componentsList = [
     name: "基本のボタン",
     isActive: false,
     preview: <BasicButton />,
-    uiCode: ButtonBasicCode,
-    useCode: ButtonBasicDemoCode,
+    uiCode: BasicButtonCode,
+    useCode: BasicButtonDemoCode,
+  },
+
+  {
+    id: "input_basic",
+    name: "テキスト入力",
+    isActive: false,
+    preview: <BasicInput />,
+    uiCode: BasicInputCode,
+    useCode: BasicInputDemoCode,
   },
 
   {
     id: "modal_basic",
     name: "基本のモーダル",
     isActive: false,
-    preview: <BasicModal />,
-    uiCode: ModalBasicCode,
-    useCode: ModalBasicDemoCode,
+    preview: <BasicInput />,
+    uiCode: BasicModalCode,
+    useCode: BasicModalDemoCode,
   },
 ];
 

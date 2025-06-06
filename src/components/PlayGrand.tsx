@@ -1,6 +1,7 @@
 import type { ComponentType } from "../App";
 import CodePreview from "./CodePreview";
 import BasicButton from "./demos/BasicButton";
+import BasicInput from "./demos/BasicInput";
 import OpenModal from "./demos/BasicModal";
 import { css } from "@emotion/react";
 
@@ -38,6 +39,9 @@ const PlayGrand = ({ components }: PlayGrandProps) => {
       break;
     case "button_basic":
       preview = <BasicButton />;
+      break;
+    case "input_basic":
+      preview = <BasicInput />;
       break;
     // 他にもcaseで増やす
     default:
