@@ -70,6 +70,9 @@ import BasicInput from "./components/demos/BasicInput";
 import BasicInputCode from "./components/ui/Input?raw";
 import BasicInputDemoCode from "./components/demos/BasicInput?raw";
 
+import BasicToast from "./components/demos/BasicToast";
+import BasicToastCode from "./components/ui/Toast?raw";
+import BasicToastDemoCode from "./components/demos/BasicToast?raw";
 
 import type { ComponentType } from "./App";
 
@@ -82,16 +85,14 @@ const componentsList = [
     uiCode: BasicButtonCode,
     useCode: BasicButtonDemoCode,
   },
-
   {
     id: "input_basic",
-    name: "テキスト入力",
+    name: "基本のテキスト入力",
     isActive: false,
     preview: <BasicInput />,
     uiCode: BasicInputCode,
     useCode: BasicInputDemoCode,
   },
-
   {
     id: "modal_basic",
     name: "基本のモーダル",
@@ -99,6 +100,14 @@ const componentsList = [
     preview: <BasicModal />,
     uiCode: BasicModalCode,
     useCode: BasicModalDemoCode,
+  },
+  {
+    id: "toast_basic",
+    name: "基本のトースト",
+    isActive: false,
+    preview: <BasicToast />,
+    uiCode: BasicToastCode, 
+    useCode: BasicToastDemoCode, 
   },
 ];
 

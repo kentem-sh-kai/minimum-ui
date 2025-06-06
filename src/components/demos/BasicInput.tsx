@@ -5,12 +5,12 @@ const BasicInput = () => {
   const [value, setValue] = useState("");
   return (
     <>
+      <p>{value}</p>
       <Input
         value={value}
         onChange={(e) => setValue(e.target.value)}
         placeholder="テキストを入力"
       />
-      <p>{value}</p>
     </>
   );
 };
