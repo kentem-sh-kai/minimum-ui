@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import React, { useState } from "react";
+import { useState } from "react";
 import type { ComponentType } from "../App";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
