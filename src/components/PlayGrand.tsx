@@ -31,26 +31,9 @@ const PlayGrand = ({ components }: PlayGrandProps) => {
     return <div>選択されていません</div>;
   }
 
-  let preview: React.ReactNode;
-
-  switch (activeComponent.id) {
-    case "modal_basic":
-      preview = <OpenModal />;
-      break;
-    case "button_basic":
-      preview = <BasicButton />;
-      break;
-    case "input_basic":
-      preview = <BasicInput />;
-      break;
-    // 他にもcaseで増やす
-    default:
-      preview = <div>プレビュー未対応</div>;
-  }
-
   return (
     <div css={PlayGrandStyle}>
-      <div css={PreviewStyle}>{preview}</div>
+      <div css={PreviewStyle}>{activeComponent.preview}</div>
       <div style={{ display: "flex" }}>
         <CodePreview activeComponent={activeComponent} type="ui" />
         <CodePreview activeComponent={activeComponent} type="use" />

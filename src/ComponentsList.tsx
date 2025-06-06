@@ -96,7 +96,7 @@ const componentsList = [
     id: "modal_basic",
     name: "基本のモーダル",
     isActive: false,
-    preview: <BasicInput />,
+    preview: <BasicModal />,
     uiCode: BasicModalCode,
     useCode: BasicModalDemoCode,
   },
