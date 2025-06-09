@@ -66,6 +66,10 @@ import BasicModal from "./components/demos/BasicModal";
 import BasicModalCode from "./components/ui/Modal?raw";
 import BasicModalDemoCode from "./components/demos/BasicModal?raw";
 
+import HeadlessUIModalDemo from "./components/demos/HeadlessUIModalDemo";
+import HeadlessUIModalCode from "./components/ui/Modal?raw";
+import HeadlessUIModalDemoCode from "./components/demos/HeadlessUIModalDemo?raw";
+
 import BasicInput from "./components/demos/BasicInput";
 import BasicInputCode from "./components/ui/Input?raw";
 import BasicInputDemoCode from "./components/demos/BasicInput?raw";
@@ -102,12 +106,20 @@ const componentsList = [
     useCode: BasicModalDemoCode,
   },
   {
+    id: "modal_headless-ui",
+    name: "基本のモーダル(HeadlessUI)",
+    isActive: false,
+    preview: <HeadlessUIModalDemo />,
+    uiCode: HeadlessUIModalCode,
+    useCode: HeadlessUIModalDemoCode,
+  },
+  {
     id: "toast_basic",
     name: "基本のトースト",
     isActive: false,
     preview: <BasicToast />,
-    uiCode: BasicToastCode, 
-    useCode: BasicToastDemoCode, 
+    uiCode: BasicToastCode,
+    useCode: BasicToastDemoCode,
   },
 ];
 
