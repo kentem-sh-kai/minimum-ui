@@ -89,6 +89,9 @@ import BasicToastDemoCode from "./components/demos/BasicToastDemo?raw";
 import ReactHookFormDemo from "./components/demos/ReactHookFormDemo";
 import ReactHookFormDemoCode from "./components/demos/ReactHookFormDemo?raw";
 
+import FormReactHookFormWithZodDemo from "./components/demos/FormReactHookFormWithZodDemo";
+import FormReactHookFormWithZodDemoCode from "./components/demos/FormReactHookFormWithZodDemo?raw";
+
 import type { ComponentType } from "./App";
 
 const componentsList = [
@@ -153,8 +156,16 @@ const componentsList = [
     name: "React Hook Form VS useState",
     isActive: false,
     preview: <ReactHookFormDemo />,
-    uiCode: "BasicToastCode",
+    uiCode: "",
     useCode: ReactHookFormDemoCode,
+  },
+    {
+    id: "form-react-hook-form-with-zod",
+    name: "フォーム (React Hook Form)",
+    isActive: false,
+    preview: <FormReactHookFormWithZodDemo />,
+    uiCode: "",
+    useCode: FormReactHookFormWithZodDemoCode,
   },
 ];
 
