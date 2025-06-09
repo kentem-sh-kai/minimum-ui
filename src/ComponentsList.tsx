@@ -58,25 +58,25 @@
  * サイドバーのリスト、右側のプレビュー＆コード表示を自動で切り替える設計とする。
  */
 
-import BasicButton from "./components/demos/BasicButton";
+import BasicButton from "./components/demos/BasicButtonDemo";
 import BasicButtonCode from "./components/ui/Button?raw";
-import BasicButtonDemoCode from "./components/demos/BasicButton?raw";
+import BasicButtonDemoCode from "./components/demos/BasicButtonDemo?raw";
 
-import BasicModal from "./components/demos/BasicModal";
+import BasicModal from "./components/demos/BasicModalDemo";
 import BasicModalCode from "./components/ui/Modal?raw";
-import BasicModalDemoCode from "./components/demos/BasicModal?raw";
+import BasicModalDemoCode from "./components/demos/BasicModalDemo?raw";
 
 import HeadlessUIModalDemo from "./components/demos/HeadlessUIModalDemo";
 import HeadlessUIModalCode from "./components/ui/Modal?raw";
 import HeadlessUIModalDemoCode from "./components/demos/HeadlessUIModalDemo?raw";
 
-import BasicInput from "./components/demos/BasicInput";
+import BasicInput from "./components/demos/BasicInputDemo";
 import BasicInputCode from "./components/ui/Input?raw";
-import BasicInputDemoCode from "./components/demos/BasicInput?raw";
+import BasicInputDemoCode from "./components/demos/BasicInputDemo?raw";
 
-import BasicToast from "./components/demos/BasicToast";
+import BasicToast from "./components/demos/BasicToastDemo";
 import BasicToastCode from "./components/ui/Toast?raw";
-import BasicToastDemoCode from "./components/demos/BasicToast?raw";
+import BasicToastDemoCode from "./components/demos/BasicToastDemo?raw";
 
 import type { ComponentType } from "./App";
 
@@ -84,7 +84,7 @@ const componentsList = [
   {
     id: "button_basic",
     name: "基本のボタン",
-    isActive: false,
+    isActive: true,
     preview: <BasicButton />,
     uiCode: BasicButtonCode,
     useCode: BasicButtonDemoCode,
