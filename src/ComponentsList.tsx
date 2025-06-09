@@ -67,8 +67,12 @@ import BasicModalCode from "./components/ui/Modal?raw";
 import BasicModalDemoCode from "./components/demos/BasicModalDemo?raw";
 
 import HeadlessUIModalDemo from "./components/demos/HeadlessUIModalDemo";
-import HeadlessUIModalCode from "./components/ui/Modal?raw";
+import HeadlessUIModalCode from "./components/ui/HeadlessUIModal?raw";
 import HeadlessUIModalDemoCode from "./components/demos/HeadlessUIModalDemo?raw";
+
+import HeadlessUIDropdownMenuDemo from "./components/demos/HeadlessUIDropdownMenuDemo";
+import HeadlessUIDropdownMenuCode from "./components/ui/HeadlessUIDropdownMenu?raw";
+import HeadlessUIDropdownMenuDemoCode from "./components/demos/HeadlessUIDropdownMenuDemo?raw";
 
 import BasicInput from "./components/demos/BasicInputDemo";
 import BasicInputCode from "./components/ui/Input?raw";
@@ -112,6 +116,14 @@ const componentsList = [
     preview: <HeadlessUIModalDemo />,
     uiCode: HeadlessUIModalCode,
     useCode: HeadlessUIModalDemoCode,
+  },
+  {
+    id: "dropdown_headless-ui",
+    name: "基本のドロップダウン(HeadlessUI)",
+    isActive: false,
+    preview: <HeadlessUIDropdownMenuDemo />,
+    uiCode: HeadlessUIDropdownMenuCode,
+    useCode: HeadlessUIDropdownMenuDemoCode,
   },
   {
     id: "toast_basic",
