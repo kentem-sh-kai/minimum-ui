@@ -86,6 +86,9 @@ import BasicToast from "./components/demos/BasicToastDemo";
 import BasicToastCode from "./components/ui/Toast?raw";
 import BasicToastDemoCode from "./components/demos/BasicToastDemo?raw";
 
+import ReactHookFormDemo from "./components/demos/ReactHookFormDemo";
+import ReactHookFormDemoCode from "./components/demos/ReactHookFormDemo?raw";
+
 import type { ComponentType } from "./App";
 
 const componentsList = [
@@ -144,6 +147,14 @@ const componentsList = [
     preview: <BasicToast />,
     uiCode: BasicToastCode,
     useCode: BasicToastDemoCode,
+  },
+  {
+    id: "react-hook-form",
+    name: "React Hook Form VS useState",
+    isActive: false,
+    preview: <ReactHookFormDemo />,
+    uiCode: "BasicToastCode",
+    useCode: ReactHookFormDemoCode,
   },
 ];
 
