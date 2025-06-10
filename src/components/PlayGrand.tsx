@@ -19,6 +19,7 @@ const PreviewStyle = css`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  overflow-y: scroll;
 `;
 
 type PlayGrandProps = {

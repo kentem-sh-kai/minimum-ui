@@ -82,6 +82,10 @@ import BasicDrawerDemo from "./components/demos/BasicDrawerDemo";
 import BasicDrawerCode from "./components/ui/Drawer?raw";
 import BasicDrawerDemoCode from "./components/demos/BasicDrawerDemo?raw";
 
+import BasicBadgeDemo from "./components/demos/BasicBadgeDemo";
+import BasicBadgeCode from "./components/ui/Badge?raw";
+import BasicBadgeDemoCode from "./components/demos/BasicBadgeDemo?raw";
+
 import HeadlessUIModalDemo from "./components/demos/HeadlessUIModalDemo";
 import HeadlessUIModalCode from "./components/ui/HeadlessUIModal?raw";
 import HeadlessUIModalDemoCode from "./components/demos/HeadlessUIModalDemo?raw";
@@ -166,6 +170,14 @@ const componentsList = [
     preview: <BasicDrawerDemo />,
     uiCode: BasicDrawerCode,
     useCode: BasicDrawerDemoCode,
+  },
+  {
+    id: "badge_basic",
+    name: "基本のバッジ",
+    isActive: false,
+    preview: <BasicBadgeDemo />,
+    uiCode: BasicBadgeCode,
+    useCode: BasicBadgeDemoCode,
   },
   {
     id: "modal_headless-ui",
