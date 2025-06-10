@@ -78,6 +78,10 @@ import BasicDialogDemo from "./components/demos/BasicDialogDemo";
 import BasicDialogCode from "./components/ui/Dialog?raw";
 import BasicDialogDemoCode from "./components/demos/BasicDialogDemo?raw";
 
+import BasicDrawerDemo from "./components/demos/BasicDrawerDemo";
+import BasicDrawerCode from "./components/ui/Drawer?raw";
+import BasicDrawerDemoCode from "./components/demos/BasicDrawerDemo?raw";
+
 import HeadlessUIModalDemo from "./components/demos/HeadlessUIModalDemo";
 import HeadlessUIModalCode from "./components/ui/HeadlessUIModal?raw";
 import HeadlessUIModalDemoCode from "./components/demos/HeadlessUIModalDemo?raw";
@@ -154,6 +158,14 @@ const componentsList = [
     preview: <BasicDialogDemo />,
     uiCode: BasicDialogCode,
     useCode: BasicDialogDemoCode,
+  },
+  {
+    id: "drawer_basic",
+    name: "基本のドロワー",
+    isActive: false,
+    preview: <BasicDrawerDemo />,
+    uiCode: BasicDrawerCode,
+    useCode: BasicDrawerDemoCode,
   },
   {
     id: "modal_headless-ui",
