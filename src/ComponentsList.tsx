@@ -70,6 +70,10 @@ import BasicRadio from "./components/demos/BasicRadioDemo";
 import BasicRadioCode from "./components/ui/Radio?raw";
 import BasicRadioDemoCode from "./components/demos/BasicRadioDemo?raw";
 
+import BasicSelect from "./components/demos/BasicSelectDemo";
+import BasicSelectCode from "./components/ui/Select?raw";
+import BasicSelectDemoCode from "./components/demos/BasicSelectDemo?raw";
+
 import HeadlessUIModalDemo from "./components/demos/HeadlessUIModalDemo";
 import HeadlessUIModalCode from "./components/ui/HeadlessUIModal?raw";
 import HeadlessUIModalDemoCode from "./components/demos/HeadlessUIModalDemo?raw";
@@ -132,6 +136,14 @@ const componentsList = [
     useCode: BasicRadioDemoCode,
   },
   {
+    id: "select_basic",
+    name: "基本のセレクトボックス",
+    isActive: false,
+    preview: <BasicSelect />,
+    uiCode: BasicSelectCode,
+    useCode: BasicSelectDemoCode,
+  },
+  {
     id: "modal_headless-ui",
     name: "基本のモーダル(HeadlessUI)",
     isActive: false,
@@ -147,7 +159,7 @@ const componentsList = [
     uiCode: HeadlessUIDropdownMenuCode,
     useCode: HeadlessUIDropdownMenuDemoCode,
   },
-    {
+  {
     id: "listbox_headless-ui",
     name: "基本のリストボックス(HeadlessUI)",
     isActive: false,
@@ -171,7 +183,7 @@ const componentsList = [
     uiCode: "",
     useCode: ReactHookFormDemoCode,
   },
-    {
+  {
     id: "form-react-hook-form-with-zod",
     name: "フォーム (React Hook Form)",
     isActive: false,
