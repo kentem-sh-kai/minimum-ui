@@ -90,6 +90,10 @@ import BasicSpinnerDemo from "./components/demos/BasicSpinnerDemo";
 import BasicSpinnerCode from "./components/ui/Spinner?raw";
 import BasicSpinnerDemoCode from "./components/demos/BasicSpinnerDemo?raw";
 
+import BasicProgressBarDemo from "./components/demos/BasicProgressBarDemo";
+import BasicProgressBarCode from "./components/ui/ProgressBar?raw";
+import BasicProgressBarDemoCode from "./components/demos/BasicProgressBarDemo?raw";
+
 // aaa
 
 import HeadlessUIModalDemo from "./components/demos/HeadlessUIModalDemo";
@@ -192,6 +196,14 @@ const componentsList = [
     preview: <BasicSpinnerDemo />,
     uiCode: BasicSpinnerCode,
     useCode: BasicSpinnerDemoCode,
+  },
+      {
+    id: "progressbar_basic",
+    name: "基本のプログレスバー",
+    isActive: false,
+    preview: <BasicProgressBarDemo />,
+    uiCode: BasicProgressBarCode,
+    useCode: BasicProgressBarDemoCode,
   },
 
   // aaaa
