@@ -66,6 +66,10 @@ import BasicModal from "./components/demos/BasicModalDemo";
 import BasicModalCode from "./components/ui/Modal?raw";
 import BasicModalDemoCode from "./components/demos/BasicModalDemo?raw";
 
+import BasicRadio from "./components/demos/BasicRadioDemo";
+import BasicRadioCode from "./components/ui/Radio?raw";
+import BasicRadioDemoCode from "./components/demos/BasicRadioDemo?raw";
+
 import HeadlessUIModalDemo from "./components/demos/HeadlessUIModalDemo";
 import HeadlessUIModalCode from "./components/ui/HeadlessUIModal?raw";
 import HeadlessUIModalDemoCode from "./components/demos/HeadlessUIModalDemo?raw";
@@ -118,6 +122,14 @@ const componentsList = [
     preview: <BasicModal />,
     uiCode: BasicModalCode,
     useCode: BasicModalDemoCode,
+  },
+  {
+    id: "radio_basic",
+    name: "基本のラジオボタン",
+    isActive: false,
+    preview: <BasicRadio />,
+    uiCode: BasicRadioCode,
+    useCode: BasicRadioDemoCode,
   },
   {
     id: "modal_headless-ui",
