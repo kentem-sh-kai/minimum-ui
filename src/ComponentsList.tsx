@@ -58,21 +58,25 @@
  * サイドバーのリスト、右側のプレビュー＆コード表示を自動で切り替える設計とする。
  */
 
-import BasicButton from "./components/demos/BasicButtonDemo";
+import BasicButtonDemo from "./components/demos/BasicButtonDemo";
 import BasicButtonCode from "./components/ui/Button?raw";
 import BasicButtonDemoCode from "./components/demos/BasicButtonDemo?raw";
 
-import BasicModal from "./components/demos/BasicModalDemo";
-import BasicModalCode from "./components/ui/Modal?raw";
-import BasicModalDemoCode from "./components/demos/BasicModalDemo?raw";
-
-import BasicRadio from "./components/demos/BasicRadioDemo";
+import BasicRadioDemo from "./components/demos/BasicRadioDemo";
 import BasicRadioCode from "./components/ui/Radio?raw";
 import BasicRadioDemoCode from "./components/demos/BasicRadioDemo?raw";
 
-import BasicSelect from "./components/demos/BasicSelectDemo";
+import BasicSelectDemo from "./components/demos/BasicSelectDemo";
 import BasicSelectCode from "./components/ui/Select?raw";
 import BasicSelectDemoCode from "./components/demos/BasicSelectDemo?raw";
+
+import BasicModalDemo from "./components/demos/BasicModalDemo";
+import BasicModalCode from "./components/ui/Modal?raw";
+import BasicModalDemoCode from "./components/demos/BasicModalDemo?raw";
+
+import BasicDialogDemo from "./components/demos/BasicDialogDemo";
+import BasicDialogCode from "./components/ui/Dialog?raw";
+import BasicDialogDemoCode from "./components/demos/BasicDialogDemo?raw";
 
 import HeadlessUIModalDemo from "./components/demos/HeadlessUIModalDemo";
 import HeadlessUIModalCode from "./components/ui/HeadlessUIModal?raw";
@@ -86,11 +90,11 @@ import HeadlessUIListboxDemo from "./components/demos/HeadlessUIListboxDemo";
 import HeadlessUIListboxCode from "./components/ui/HeadlessUIListbox?raw";
 import HeadlessUIListboxDemoCode from "./components/demos/HeadlessUIListboxDemo?raw";
 
-import BasicInput from "./components/demos/BasicInputDemo";
+import BasicInputDemo from "./components/demos/BasicInputDemo";
 import BasicInputCode from "./components/ui/Input?raw";
 import BasicInputDemoCode from "./components/demos/BasicInputDemo?raw";
 
-import BasicToast from "./components/demos/BasicToastDemo";
+import BasicToastDemo from "./components/demos/BasicToastDemo";
 import BasicToastCode from "./components/ui/Toast?raw";
 import BasicToastDemoCode from "./components/demos/BasicToastDemo?raw";
 
@@ -107,7 +111,7 @@ const componentsList = [
     id: "button_basic",
     name: "基本のボタン",
     isActive: true,
-    preview: <BasicButton />,
+    preview: <BasicButtonDemo />,
     uiCode: BasicButtonCode,
     useCode: BasicButtonDemoCode,
   },
@@ -115,23 +119,15 @@ const componentsList = [
     id: "input_basic",
     name: "基本のテキスト入力",
     isActive: false,
-    preview: <BasicInput />,
+    preview: <BasicInputDemo />,
     uiCode: BasicInputCode,
     useCode: BasicInputDemoCode,
-  },
-  {
-    id: "modal_basic",
-    name: "基本のモーダル",
-    isActive: false,
-    preview: <BasicModal />,
-    uiCode: BasicModalCode,
-    useCode: BasicModalDemoCode,
   },
   {
     id: "radio_basic",
     name: "基本のラジオボタン",
     isActive: false,
-    preview: <BasicRadio />,
+    preview: <BasicRadioDemo />,
     uiCode: BasicRadioCode,
     useCode: BasicRadioDemoCode,
   },
@@ -139,9 +135,25 @@ const componentsList = [
     id: "select_basic",
     name: "基本のセレクトボックス",
     isActive: false,
-    preview: <BasicSelect />,
+    preview: <BasicSelectDemo />,
     uiCode: BasicSelectCode,
     useCode: BasicSelectDemoCode,
+  },
+  {
+    id: "modal_basic",
+    name: "基本のモーダル",
+    isActive: false,
+    preview: <BasicModalDemo />,
+    uiCode: BasicModalCode,
+    useCode: BasicModalDemoCode,
+  },
+  {
+    id: "dialog_basic",
+    name: "基本のダイアログ",
+    isActive: false,
+    preview: <BasicDialogDemo />,
+    uiCode: BasicDialogCode,
+    useCode: BasicDialogDemoCode,
   },
   {
     id: "modal_headless-ui",
@@ -171,7 +183,7 @@ const componentsList = [
     id: "toast_basic",
     name: "基本のトースト",
     isActive: false,
-    preview: <BasicToast />,
+    preview: <BasicToastDemo />,
     uiCode: BasicToastCode,
     useCode: BasicToastDemoCode,
   },
