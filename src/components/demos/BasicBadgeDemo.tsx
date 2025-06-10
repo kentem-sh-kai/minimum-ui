@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import React from 'react';
 
 import { Badge } from '../ui/Badge'; // 作成したUI部品
 

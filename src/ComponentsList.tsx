@@ -86,6 +86,12 @@ import BasicBadgeDemo from "./components/demos/BasicBadgeDemo";
 import BasicBadgeCode from "./components/ui/Badge?raw";
 import BasicBadgeDemoCode from "./components/demos/BasicBadgeDemo?raw";
 
+import BasicSpinnerDemo from "./components/demos/BasicSpinnerDemo";
+import BasicSpinnerCode from "./components/ui/Spinner?raw";
+import BasicSpinnerDemoCode from "./components/demos/BasicSpinnerDemo?raw";
+
+// aaa
+
 import HeadlessUIModalDemo from "./components/demos/HeadlessUIModalDemo";
 import HeadlessUIModalCode from "./components/ui/HeadlessUIModal?raw";
 import HeadlessUIModalDemoCode from "./components/demos/HeadlessUIModalDemo?raw";
@@ -179,6 +185,16 @@ const componentsList = [
     uiCode: BasicBadgeCode,
     useCode: BasicBadgeDemoCode,
   },
+    {
+    id: "spinner_basic",
+    name: "基本のスピナー",
+    isActive: false,
+    preview: <BasicSpinnerDemo />,
+    uiCode: BasicSpinnerCode,
+    useCode: BasicSpinnerDemoCode,
+  },
+
+  // aaaa
   {
     id: "modal_headless-ui",
     name: "基本のモーダル(HeadlessUI)",
