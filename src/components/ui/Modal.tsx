@@ -1,75 +1,82 @@
-import { css } from "@emotion/react";
-import React, { useEffect } from "react";
+import { css } from '@emotion/react';
+import React, { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 
-type ModalProps = {
-  open: boolean;
+interface ModalProps {
+  isOpen: boolean;
   onClose: () => void;
   children: React.ReactNode;
-};
+}
 
+// スタイル定義
 const overlayStyle = css`
   position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.4);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   z-index: 1000;
 `;
 
-const modalStyle = css`
-  background: #fff;
-  min-width: 320px;
-  max-width: 90vw;
-  min-height: 120px;
-  border-radius: 10px;
-  box-shadow: 0 4px 24px #0003;
-  padding: 32px 24px;
+const contentStyle = css`
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  max-width: 500px;
+  width: 90%;
   position: relative;
-  animation: modalIn 0.18s;
-  @keyframes modalIn {
-    from { transform: translateY(24px) scale(0.96); opacity: 0; }
-    to { transform: none; opacity: 1; }
+`;
+
+const closeButtonStyle = css`
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #a0aec0;
+  &:hover {
+    color: #4a5568;
   }
 `;
 
-const closeBtn = css`
-  position: absolute;
-  top: 10px;
-  right: 14px;
-  background: none;
-  border: none;
-  font-size: 1.5em;
-  color: #555;
-  cursor: pointer;
-`;
-
-export function Modal({ open, onClose, children }: ModalProps) {
-  // ESCキーで閉じる
+export const Modal = ({ isOpen, onClose, children }: ModalProps) => {
+  const [isMounted, setIsMounted] = React.useState(false);
   useEffect(() => {
-    if (!open) return;
-    const handler = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') onClose();
     };
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
-  }, [open, onClose]);
+    if (isOpen) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen, onClose]);
 
-  if (!open) return null;
+  if (!isOpen || !isMounted) {
+    return null;
+  }
 
-  return (
+  return createPortal(
     <div css={overlayStyle} onClick={onClose}>
-      <div
-        css={modalStyle}
-        onClick={e => e.stopPropagation()}
-        role="dialog"
-        aria-modal="true"
-      >
-        <button css={closeBtn} aria-label="閉じる" onClick={onClose}>
-          ×
+      <div css={contentStyle} onClick={(e) => e.stopPropagation()}>
+        <button css={closeButtonStyle} onClick={onClose} aria-label="閉じる">
+          &times;
         </button>
         {children}
       </div>
-    </div>
+    </div>,
+    document.body
   );
-}
+};
